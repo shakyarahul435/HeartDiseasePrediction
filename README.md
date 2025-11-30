@@ -46,27 +46,18 @@ heart-disease-prediction/
 │   ├── app.py                      # Flask server
 │   ├── models/
 │   │   ├── best_heart_model.pkl    # Trained Random Forest
-│   │   └── scaler.pkl              # Fitted StandardScaler
-│   ├── predict.py                  # Prediction route
+│   │   └── scaler.pkl              # Fitted StandardScaler    
 │   └── requirements.txt
 │
 ├── frontend/
 │   ├── public/
 │   ├── src/
-│   │   ├── components/
-│   │   │   └── PredictionForm.js   # User input form
-│   │   ├── api/
-│   │   │   └── api.js              # Native fetch calls
 │   │   ├── App.js
 │   │   └── index.js
 │   ├── package.json
-│   └── README.md (CRA default)
 │
 ├── data/
 │   └── cleaned_merged_heart_dataset.csv
-│
-├── notebook/
-│   └── app.ipynb                   # Full training, SHAP, PDF report
 │
 └── README.md
 ```
@@ -119,6 +110,7 @@ Model Performance (Final Results)
 Authors
 
 Rahul Shakya(st125982) – Asian Institute of Technology
+
 Alston Alvares(st126488) – Asian Institute of Technology
 
 AIT Academic Project: Heart Disease Prediction using Machine Learning
