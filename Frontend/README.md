@@ -77,8 +77,8 @@ heart-disease-prediction/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/heart-disease-prediction.git
-cd heart-disease-prediction
+git clone https://github.com/shakyarahul435/HeartDiseasePrediction.git
+cd HeartDiseasePrediction
 ```
 ### 2. Run Backend (Flask)
 ```bash
