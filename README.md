@@ -1,5 +1,5 @@
 # Heart Disease Prediction Web App
-### Early Detection of Cardiovascular Risk – Powered by Random Forest (98.15% Accuracy)
+### Early Detection of Cardiovascular Risk – Powered by Random Forest (85.39% Accuracy)
 
 A full-stack web application that predicts heart disease risk using patient clinical data.  
 Built with **React (Create React App)** frontend and **Flask** backend.  
@@ -10,8 +10,8 @@ Built with **React (Create React App)** frontend and **Flask** backend.
 ![React](https://img.shields.io/badge/React-18-blue)
 ![Create React App](https://img.shields.io/badge/Built%20with-CRA-61DAFB)
 ![Model](https://img.shields.io/badge/Model-Random%20Forest-orange)
-![Accuracy](https://img.shields.io/badge/Test%20Accuracy-98.15%25-success)
-![AUC](https://img.shields.io/badge/AUC-0.999-brightgreen)
+![Accuracy](https://img.shields.io/badge/Test%20Accuracy-85.39%25-success)
+![AUC](https://img.shields.io/badge/AUC-0.824-brightgreen)
 
 ## Why Random Forest Was Chosen
 
@@ -19,18 +19,18 @@ After training and tuning 6 models with GridSearchCV + 5-fold cross-validation:
 
 | Model                | CV Accuracy | Test Accuracy | AUC    | F1-Score |
 |----------------------|-------------|---------------|--------|----------|
-| **Random Forest**    | **96.56%**  | **98.15%**    | 0.999  | 0.982    |
-| XGBoost              | 95.63%      | 97.62%        | 0.998  | 0.977    |
-| Gradient Boosting    | 93.64%      | 95.24%        | 0.990  | 0.954    |
-| KNN                  | 93.84%      | 94.44%        | 0.975  | 0.949    |
-| SVM                  | 93.84%      | 93.39%        | 0.977  | 0.938    |
-| Logistic Regression  | 74.97%      | 74.87%        | 0.805  | 0.774    |
+| **Random Forest**    | **85.44%**  | **85.39%**    | 0.824  | 0.738    |
+| XGBoost              | 84.27%      | 84.84%        | 0.829  | 0.736    |
+| KNN                  | 81.49%      | 82.39%        | 0.803  | 0.710    |
+| Gradient Boosting    | 76.48%      | 76.80%        | 0.789  | 0.466    |
+| SVM                  | 72.09%      | 72.40%        | 0.633  | 0.224    |
+| Logistic Regression  | 69.78%      | 69.95%        | 0.604  | 0.032    |
 
-**Random Forest is the clear winner** - highest accuracy, best F1-score, near-perfect AUC, and only **7 misclassifications** on the test set.
+**Random Forest is the clear winner** - highest accuracy, best F1-score, and high AUC.
 
 ## Features
 
-- Merged dataset from **UCI, Kaggle, and Framingham** (1,888 high-quality samples)
+- Merged dataset from **UCI, Kaggle, and Framingham**
 - Robust preprocessing: median imputation, IQR outlier capping, `StandardScaler`
 - Stratified train-test split to preserve class distribution
 - Model saved with **joblib** (`best_heart_model.pkl` + `scaler.pkl`)
@@ -91,21 +91,20 @@ Model Performance (Final Results)
 
 |Metric |Value |
 |---|---|
-|Test Accuracy|98.15%|
-|Precision|97.49%|
-|Recall|98.98%|
-|F1-Score|98.23%|
-|AUC|0.999|
-|Misclassifications|7 out of 378|
+|Test Accuracy|85.39%|
+|Precision|79.95%|
+|Recall|68.60%|
+|F1-Score|73.84%|
+|AUC|0.824|
 
 
 ### Top Risk Factors (from SHAP Analysis)
 
-1. oldpeak – Exercise-induced ST depression
-2. thalach – Maximum heart rate achieved
-3. ca – Number of major vessels colored by fluoroscopy
-4. cp – Chest pain type
-5. thal – Thalassemia indicator
+1. trestbps – Resting blood pressure
+2. chol – Serum cholesterol
+3. age – Age
+4. sex – Gender
+5. fbs – Fasting blood sugar
 
 Authors
 
